@@ -6,6 +6,9 @@ public class Main {
 	private static int x,y;
 	private static char direction;
 	private static Scanner scanner;
+	private static String instructions;
+	private static int maxX=0;
+	private static int maxY=0;
 	public static char turnRight() {
 		switch(direction) {
 		case 'N':
@@ -57,12 +60,7 @@ public class Main {
 		}
 	}
 	public static void main(String[] args){
-		x=3;
-		y=3;
-		direction='E';
-		String instructions ="MMRMMRMRRM";
-		int maxX=0;
-		int maxY=0;
+
 		try {
 			scanner= new Scanner(new File(args[0]));
 			String[] upperRightPlateauCoordinates = scanner.nextLine().split(" ");
